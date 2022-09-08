@@ -1,0 +1,101 @@
+.slider
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 1300px
+    margin: 0 auto
+
+.swiper
+    width: 1200px
+    height: 320px
+    margin: 0 auto
+    margin-top: 40px
+    background: #ffffff
+    border-radius: 24px
+
+.info
+    margin-left: 64px
+
+.background-first
+    border-radius: 24px
+    background: url("../../assets/slider_banner1.png")
+
+.background-second
+    border-radius: 24px
+    background: url("../../assets/slider_banner2.png")
+
+.background-third
+    border-radius: 24px
+    background: url("../../assets/slider_banner3.png")
+
+h2
+    margin: 0
+    font-size: 48px
+    padding-top: 56px
+    padding-bottom: 16px
+
+p
+    margin: 0px
+    font-size: 16px
+    padding-bottom: 40px
+
+.btn-slide
+    color: white
+    cursor: pointer
+    font-weight: 500
+    font-size: 16px
+    background: #07C88E
+    border-radius: 8px
+    padding: 12px 24px
+    border: 0px
+    margin-bottom: 56px
+
+    &:hover
+        background: lighten(#07C88E, 10)
+
+.swiper-button-prev-new
+    background: #FFFFFF no-repeat center
+    box-shadow: 0px 4px 24px rgba(0, 11, 38, 0.12)
+    border-radius: 50px
+    height: 44px
+    width: 44px
+    z-index: 2
+    position: relative
+    top: 15px
+    left: 25px
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:hover
+        background: darken(#fff, 10)
+
+.swiper-button-prev-new::after
+    display: none
+
+.swiper-button-next-new
+    background: #FFFFFF no-repeat center
+    box-shadow: 0px 4px 24px rgba(0, 11, 38, 0.12)
+    border-radius: 50px
+    height: 44px
+    width: 44px
+    z-index: 2
+    position: relative
+    left: -25px
+    cursor: pointer
+    top: 15px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:hover
+        background: darken(#fff, 10)
+
+.swiper-button-next-new::after
+    display: none
+
+.swiper-button-next-u, .swiper-button-prev-u
+    display: flex
+    justify-content: center
+    align-items: center

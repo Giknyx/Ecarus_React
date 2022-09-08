@@ -1,0 +1,128 @@
+$font-stack: Inter, sans-serif
+
+span
+    font-family: $font-stack
+    font-size: 18px
+    font-weight: 500
+
+header
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+
+.header_wrapper
+    max-width: 1400px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto
+    height: 92px
+
+.header_nav
+    display: flex
+    align-items: center
+
+.logo
+    height: 22px
+    width: 120px
+
+nav
+    height: 100%
+    margin-left: 50px
+    align-items: center
+    display: flex
+
+a
+    text-decoration: none
+    padding: 36.5px 0px
+    margin-right: 25px
+    color: #000B26
+    opacity: 0.64
+    font-family: $font-stack
+    font-size: 18px
+    font-weight: 400
+    position: relative
+    display: inline-block
+
+a::before
+    transition: 300ms
+    content: ""
+    position: absolute
+    background-color: #07C88E
+    border-radius: 5px 5px 0px 0px
+    height: 0%
+    width: 100%
+    bottom: 0px
+
+a:hover
+    opacity: 1
+
+a:hover::before
+    height: 3px
+
+a:last-child
+    margin-right: 0px
+
+.main
+    font-weight: 500
+    opacity: 1
+
+.header_controls
+    display: flex
+    align-items: center
+    margin-left: 380px
+
+.location
+    align-items: center
+    display: flex
+    margin-right: 0px
+    border: 0px
+    cursor: pointer
+    color: #000B26
+    opacity: 0.8
+    background-color: transparent
+
+    &:hover
+        opacity: 1
+
+    span
+        margin-left: 5px
+
+.currency
+    display: flex
+    align-items: center
+    margin-left: 45px
+
+    span
+        color: black
+        font-weight: bold
+        margin-left: 5px
+        padding-bottom: 2px
+
+.my-account
+    display: flex
+    align-items: center
+    margin-left: 25px
+
+    cursor: pointer
+    border: 0px
+    background: transparent
+
+    span
+        margin-left: 5px
+
+.login
+    margin-left: 50px
+    align-items: center
+    display: flex
+    border: 0px
+    cursor: pointer
+    color: #000B26
+    opacity: 0.8
+    background-color: transparent
+
+    &:hover
+        opacity: 1
+
+    span
+        margin-left: 5px
+        color: rgba(0, 11, 38, 0.8)
