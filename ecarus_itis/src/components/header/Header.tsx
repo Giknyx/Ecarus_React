@@ -1,5 +1,5 @@
 import './Header.sass';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../../svg-icons/logo.svg';
 import { Icon } from '../ui/icon/Icon';
 
@@ -9,24 +9,50 @@ export const Header = () => {
       <div className="header_wrapper">
         <div className="header_nav">
           <img src={logo} alt="logo" className="logo" />
-          <nav>
-            <Link to="/" className="main">
+          <nav className="header_nav">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? 'header_a activated' : 'header_a'
+              }
+            >
               Главная
-            </Link>
-            <Link to="map">Пункты сбора</Link>
-            <Link to="market">ЭкоМаркет</Link>
-            <Link to="about">О сервисе</Link>
+            </NavLink>
+            <NavLink
+              to="map"
+              className={({ isActive }) =>
+                isActive ? 'header_a activated' : 'header_a'
+              }
+            >
+              Пункты сбора
+            </NavLink>
+            <NavLink
+              to="market"
+              className={({ isActive }) =>
+                isActive ? 'header_a activated' : 'header_a'
+              }
+            >
+              ЭкоМаркет
+            </NavLink>
+            <NavLink
+              to="about"
+              className={({ isActive }) =>
+                isActive ? 'header_a activated' : 'header_a'
+              }
+            >
+              О сервисе
+            </NavLink>
           </nav>
         </div>
 
         <div className="header_controls">
           <button className="location">
             <Icon name="location" height="24" width="24" />
-            <span>Казань</span>
+            <span className="header_span">Казань</span>
           </button>
           <button className="login">
             <Icon name="login" height="24" width="24" />
-            <span>Войти</span>
+            <span className="header_span">Войти</span>
           </button>
         </div>
       </div>

@@ -30,8 +30,8 @@ export const Slider = () => {
         <SwiperSlide>
           <div className="background-first">
             <div className="info">
-              <h2>Сделаем мир чище</h2>
-              <p>
+              <h2 className="slider_h2">Сделаем мир чище</h2>
+              <p className="slider_p">
                 Сдай макулатуру или старую одежду и получи скидку
                 <br />
                 на покупку товаров из переработанных материалов
@@ -43,8 +43,8 @@ export const Slider = () => {
         <SwiperSlide>
           <div className="background-second">
             <div className="info">
-              <h2>А вы знали...</h2>
-              <p>
+              <h2 className="slider_h2">А вы знали...</h2>
+              <p className="slider_p">
                 Что среднее время разложения пластмассовых изделий колеблется
                 <br />
                 от 400 до 700 лет, а полиэтиленовых пакетов — от 100 до 200 лет?
@@ -56,8 +56,8 @@ export const Slider = () => {
         <SwiperSlide>
           <div className="background-third">
             <div className="info">
-              <h2>Что с масками?</h2>
-              <p>
+              <h2 className="slider_h2">Что с масками?</h2>
+              <p className="slider_p">
                 Медицинские маски не обязательно должны становиться отходами.
                 <br />
                 Их тоже можно сдать на переработку.

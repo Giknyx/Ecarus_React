@@ -5,8 +5,8 @@ export const Cards = () => {
   return (
     <div className="сards-container">
       <div className="card">
-        <h3>Пункты сбора</h3>
-        <p>
+        <h3 className="card_h3">Пункты сбора</h3>
+        <p className="card_p">
           Посмотри, где в твоем городе
           <br />
           можно сдать вторсырье <br />
@@ -18,8 +18,8 @@ export const Cards = () => {
       </div>
 
       <div className="card">
-        <h3>Экомаркет</h3>
-        <p>
+        <h3 className="card_h3">Экомаркет</h3>
+        <p className="card_p">
           Используй заработанные
           <br />
           экокоины для покупки товаров <br />

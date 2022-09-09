@@ -1,6 +1,6 @@
 $font-stack: Inter, sans-serif
 
-span
+.header_span
     font-family: $font-stack
     font-size: 18px
     font-weight: 500
@@ -25,13 +25,13 @@ header
     height: 22px
     width: 120px
 
-nav
+.header_nav
     height: 100%
     margin-left: 50px
     align-items: center
     display: flex
 
-a
+.header_a
     text-decoration: none
     padding: 36.5px 0px
     margin-right: 25px
@@ -43,28 +43,31 @@ a
     position: relative
     display: inline-block
 
-a::before
-    transition: 300ms
-    content: ""
-    position: absolute
-    background-color: #07C88E
-    border-radius: 5px 5px 0px 0px
-    height: 0%
-    width: 100%
-    bottom: 0px
+    &::before
+        transition: 300ms
+        content: ""
+        position: absolute
+        background-color: #07C88E
+        border-radius: 5px 5px 0px 0px
+        height: 0%
+        width: 100%
+        bottom: 0px
 
-a:hover
-    opacity: 1
+    &:hover
+        opacity: 1
 
-a:hover::before
-    height: 3px
+    &:hover::before
+        height: 3px
 
-a:last-child
-    margin-right: 0px
+    &:last-child
+        margin-right: 0px
 
-.main
+.activated
     font-weight: 500
     opacity: 1
+
+    &::before
+        height: 3px
 
 .header_controls
     display: flex
