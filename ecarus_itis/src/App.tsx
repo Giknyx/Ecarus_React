@@ -8,6 +8,7 @@ import { Auth } from './pages/auth/Auth';
 import { Home } from './pages/home/Home';
 import { Footer } from './components/footer/Footer';
 import Market from './pages/market/Market';
+import { CollectionPoints } from './pages/collection_points/CollectionPoints';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/market" element={<Market />} />
+          <Route path="/map" element={<CollectionPoints />} />
           <Route path="/profile" element={<Auth />}>
             <Route path="/profile/promocodes" element={<PromocodeCard />} />
             <Route path="/profile/histories" element={<HistoryCard />} />

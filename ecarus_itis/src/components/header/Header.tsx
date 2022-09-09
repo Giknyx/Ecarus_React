@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <header>
       <div className="header_wrapper">
-        <div className="header_nav">
+        <div className="header_nav_container">
           <img src={logo} alt="logo" className="logo" />
           <nav className="header_nav">
             <NavLink
@@ -50,10 +50,10 @@ export const Header = () => {
             <Icon name="location" height="24" width="24" />
             <span className="header_span">Казань</span>
           </button>
-          <button className="login">
+          <NavLink to={'profile'} className="login">
             <Icon name="login" height="24" width="24" />
             <span className="header_span">Войти</span>
-          </button>
+          </NavLink>
         </div>
       </div>
     </header>
