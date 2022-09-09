@@ -7,6 +7,7 @@ import { PromocodeCard } from './components/promocode_card/PromocodeCard';
 import { Auth } from './pages/auth/Auth';
 import { Home } from './pages/home/Home';
 import { Footer } from './components/footer/Footer';
+import Market from './pages/market/Market';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/market" element={<Market />} />
           <Route path="/profile" element={<Auth />}>
             <Route path="/profile/promocodes" element={<PromocodeCard />} />
             <Route path="/profile/histories" element={<HistoryCard />} />
