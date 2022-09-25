@@ -2,8 +2,24 @@ import './Header.sass';
 import { NavLink } from 'react-router-dom';
 import logo from '../../svg-icons/logo.svg';
 import { Icon } from '../ui/icon/Icon';
+import { useStores } from '../../utils/use-stores-hook';
+import { SignInModal } from '../modals/SignInModal/SignInModal';
+import { observer } from 'mobx-react';
+import profileImg from '../../assets/profile1.png';
+import currency from '../../assets/currency.png';
+import { useState } from 'react';
 
-export const Header = () => {
+export const Header = observer(() => {
+  const [logged, setLogged] = useState(false);
+
+  const {
+    modalStore: { setCurrentModal },
+  } = useStores();
+
+  const openModal = () => {
+    setCurrentModal(SignInModal);
+  };
+
   return (
     <header>
       <div className="header_wrapper">
@@ -35,7 +51,7 @@ export const Header = () => {
               ЭкоМаркет
             </NavLink>
             <NavLink
-              to="about"
+              to="/about"
               className={({ isActive }) =>
                 isActive ? 'header_a activated' : 'header_a'
               }
@@ -50,12 +66,34 @@ export const Header = () => {
             <Icon name="location" height="24" width="24" />
             <span className="header_span">Казань</span>
           </button>
-          <NavLink to={'profile'} className="login">
-            <Icon name="login" height="24" width="24" />
-            <span className="header_span">Войти</span>
-          </NavLink>
+          {!logged ? (
+            <button className="login" onClick={openModal}>
+              <Icon name="login" height="24" width="24" />
+              <span className="header_span">Войти</span>
+            </button>
+          ) : (
+            <>
+              <img
+                src={currency}
+                alt="currency"
+                height="24"
+                width="24"
+                className="header_img"
+              />
+              <span className="header_span">1000</span>
+
+              <img
+                src={profileImg}
+                alt="Профиль"
+                height="24"
+                width="24"
+                className="header_img"
+              />
+              <span className="header_span">Алексей</span>
+            </>
+          )}
         </div>
       </div>
     </header>
   );
-};
+});

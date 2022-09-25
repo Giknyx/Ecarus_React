@@ -68,6 +68,7 @@ export const Filters = () => {
         <h5 className="market_h5">Пол</h5>
         {genders.map((gender, index) => (
           <Checkbox
+            key={index}
             isChecked={gender.checked}
             onChange={() => checkStatusProducts(index, setGenders, genders)}
             title={gender.name}
@@ -92,6 +93,7 @@ export const Filters = () => {
         />
         {types.map((type, index) => (
           <Checkbox
+            key={index}
             isChecked={type.checked}
             onChange={() => {
               if (type.checked) {
@@ -121,6 +123,7 @@ export const Filters = () => {
         />
         {brands.map((brand, index) => (
           <Checkbox
+            key={index}
             isChecked={brand.checked}
             onChange={() => {
               if (brand.checked) {

@@ -1,9 +1,7 @@
 import SwiperCore, { Navigation } from 'swiper';
 import { Icon } from '../ui/icon/Icon';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Slider.sass';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -25,7 +23,6 @@ export const Slider = () => {
         spaceBetween={300}
         slidesPerView={1}
         onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <div className="background-first">
